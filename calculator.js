@@ -10,7 +10,7 @@ function calc (... input){
     else if (input.includes('-')){
         return sub(Number.parseInt(input[0]), Number.parseInt(input[2]));
     }
-    else if (input.includes('*')){
+    else if (input.includes('x')){
         return mul(Number.parseInt(input[0]), Number.parseInt(input[2]));
     }
     else if (input.includes('/')){
@@ -208,7 +208,12 @@ function equalPress(){
     }
 };
 
-document.getElementById("switch").addEventListener("click", function(){ document.getElementById("history").innerHTML = localStorage.getItem("history")});
+document.getElementById("switch").addEventListener("click", function(){ 
+    document.getElementById("history").innerHTML = localStorage.getItem("history");
+
+    document.getElementById("display").style.backgroundColor = 'gainsboro';
+    document.getElementById("history").style.backgroundColor = 'gainsboro';
+});
 
 document.addEventListener("keypress", function(event){
 
