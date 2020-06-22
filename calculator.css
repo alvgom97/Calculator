@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    height: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 5px 4px 10px 3px #202020;
+    border: 1px solid gainsboro;
+    background-color: #202020;
+    display: grid;
+    grid-template-columns: repeat(4, 5em) 3em;
+    grid-template-rows: repeat(5, 5em);
+    grid-template-areas:"display display historic historic switch"
+                        "one two three cancel none"
+                        "four five six sum none"
+                        "seven eight nine subs none"
+                        "z equal div mul none";
+}
+
+#display {
+    grid-area: display;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 0.2em;
+    background-color: gainsboro;
+}
+
+#historic {
+    grid-area: historic;
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0.2em;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 0.2em;
+    
+    background-color: gainsboro;
+}
+
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #202020; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #202020; 
+}
+
+#res {
+    grid-area: res;
+}
+
+/* Numbers */
+
+.number {
+    background-color: lightpink;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0.1em;
+    outline: none;
+    font-size: 1.2em;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#zero {
+    grid-area: z;
+}
+
+/* Operations */
+
+.operation {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0.1em;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.operation:disabled {
+    color: black;
+}
+
+#sum {
+    grid-area: sum;
+}
+
+#sub {
+    grid-area: subs;
+}
+
+#mul {
+    grid-area: mul;
+}
+
+#div {
+    grid-area: div;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#cancel {
+    grid-area: cancel;
+}
+
+#switch {
+    grid-area: switch;
+}
