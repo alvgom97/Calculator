@@ -14,7 +14,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 5em) 3em;
     grid-template-rows: repeat(5, 5em);
-    grid-template-areas:"display display historic historic switch"
+    grid-template-areas:"display display history history switch"
                         "one two three cancel none"
                         "four five six sum none"
                         "seven eight nine subs none"
@@ -33,8 +33,8 @@ main {
     background-color: gainsboro;
 }
 
-#historic {
-    grid-area: historic;
+#history {
+    grid-area: history;
     overflow: auto;
     white-space: nowrap;
     margin: 0.2em;
