@@ -2,6 +2,8 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
+    background-image: url(img/background.jpg);
+    background-size: 10em;
 }
 
 main {
