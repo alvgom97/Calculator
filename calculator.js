@@ -1,3 +1,4 @@
+const { indigo } = require("color-name");
 
 function calc (... input){
 
@@ -197,8 +198,14 @@ function equalPress(){
 
     if(document.getElementById("equal").disabled === false){
         // Adds the new operation on top of the list
-        let op = document.getElementById("display").innerHTML + " = " + 
-        calc(document.getElementById("display").innerText) + "</br>" + localStorage.getItem("history");
+        if(localStorage.getItem("history")){
+            let op = document.getElementById("display").innerHTML + " = " + 
+            calc(document.getElementById("display").innerText) + "</br>" + localStorage.getItem("history");
+        } else {
+            let op = document.getElementById("display").innerHTML + " = " + 
+            calc(document.getElementById("display").innerText);
+        }
+        
 
         document.getElementById("history").innerHTML = op;
         document.getElementById("display").innerHTML = "";
